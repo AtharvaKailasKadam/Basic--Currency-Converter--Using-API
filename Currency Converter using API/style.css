@@ -1,4 +1,3 @@
-/* Animated gradient background with smooth color transition */
 body {
   margin: 0;
   height: 100vh;
@@ -6,24 +5,22 @@ body {
   background-size: 800% 800%;
   animation: gradientShift 15s ease infinite;
   display: flex;
-  flex-direction: column; /* stack children vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   font-size: 2rem;
   text-align: center;
-  gap: 1.5rem; /* space between paragraph and button */
+  gap: 1.5rem;
 }
 
-/* Paragraph with subtle fade-in and slide-up effect */
 p {
   animation: fadeSlideUp 2s ease forwards;
   opacity: 0;
   transform: translateY(20px);
 }
 
-/* Cat emoji floating animation with color pulse */
 .cat-emoji {
   display: inline-block;
   animation: floatCat 3s ease-in-out infinite, colorPulse 4s ease-in-out infinite;
@@ -49,7 +46,6 @@ p {
   }
 }
 
-/* Animated button with scale and shadow effect */
 button {
   background: #4ade80;
   border: none;
@@ -64,7 +60,6 @@ button {
   font-size: 1.1rem;
 }
 
-/* Remove width and align-self from general button to avoid conflict */
 button:hover {
   box-shadow: 0 0 30px #22c55e;
   transform: scale(1.1);
@@ -99,12 +94,8 @@ button:hover {
   }
 }
 
-/* Additional styles for your currency converter elements */
-
-/* Container styling */
 .Container {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
   width: 100%;
@@ -116,14 +107,12 @@ button:hover {
   gap: 1.5rem;
 }
 
-/* Form styling */
 form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Amount input styling */
 .Amount p {
   font-weight: 600;
   font-size: 1.1rem;
@@ -152,7 +141,6 @@ form {
   outline: none;
 }
 
-/* Dropdown container */
 .DropDown {
   display: flex;
   justify-content: space-between;
@@ -160,7 +148,6 @@ form {
   gap: 1rem;
 }
 
-/* From and To sections */
 .from, .to {
   flex: 1;
   display: flex;
@@ -170,7 +157,6 @@ form {
   font-weight: 600;
 }
 
-/* Select container with flag and select */
 .Select-Container {
   display: flex;
   align-items: center;
@@ -186,7 +172,6 @@ form {
   height: 20px;
   border-radius: 4px;
   object-fit: cover;
-  user-select: none;
 }
 
 .Select-Container select {
@@ -201,17 +186,14 @@ form {
   transition: color 0.3s ease;
 }
 
-/* Dropdown arrow */
 .Select-Container select::-ms-expand {
   display: none;
 }
 
-/* Hover effect on select container */
 .Select-Container:hover {
   box-shadow: 0 0 15px #4ade80;
 }
 
-/* Icon styling and animation */
 .fa-right-left {
   font-size: 1.8rem;
   color: white;
@@ -224,7 +206,6 @@ form {
   transform: rotate(180deg);
 }
 
-/* Message styling */
 .msg {
   text-align: center;
   font-style: italic;
@@ -233,7 +214,6 @@ form {
   margin-top: 0.5rem;
 }
 
-/* Specific styling for the button with class FormButtons to be on next line */
 .FormButtons {
   display: block;
   width: 100%;
@@ -259,7 +239,6 @@ form {
   transform: scale(1.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   body {
     font-size: 1.5rem;
@@ -277,8 +256,8 @@ form {
     max-width: 100%;
   }
 }
-/* Use a dark slate blue color for better contrast on white without using black */
+
 .Select-Container select,
 .Select-Container select option {
-  color: #2f4f4f; /* Dark Slate Gray */
+  color: #2f4f4f;
 }
