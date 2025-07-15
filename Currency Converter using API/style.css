@@ -1,0 +1,284 @@
+/* Animated gradient background with smooth color transition */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  gap: 1.5rem; /* space between paragraph and button */
+}
+
+/* Paragraph with subtle fade-in and slide-up effect */
+p {
+  animation: fadeSlideUp 2s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Cat emoji floating animation with color pulse */
+.cat-emoji {
+  display: inline-block;
+  animation: floatCat 3s ease-in-out infinite, colorPulse 4s ease-in-out infinite;
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+}
+
+@keyframes floatCat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(15deg);
+  }
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(45deg);
+  }
+}
+
+/* Animated button with scale and shadow effect */
+button {
+  background: #4ade80;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #4ade80;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+  font-size: 1.1rem;
+}
+
+/* Remove width and align-self from general button to avoid conflict */
+button:hover {
+  box-shadow: 0 0 30px #22c55e;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px #4ade80;
+  }
+  50% {
+    box-shadow: 0 0 30px #22c55e;
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Additional styles for your currency converter elements */
+
+/* Container styling */
+.Container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Amount input styling */
+.Amount p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.Amount input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.Amount input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Amount input:hover,
+.Amount input:focus {
+  box-shadow: 0 0 10px #4ade80;
+  outline: none;
+}
+
+/* Dropdown container */
+.DropDown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* From and To sections */
+.from, .to {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+/* Select container with flag and select */
+.Select-Container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.25rem 0.75rem;
+  gap: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.Select-Container img {
+  width: 32px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.Select-Container select {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Dropdown arrow */
+.Select-Container select::-ms-expand {
+  display: none;
+}
+
+/* Hover effect on select container */
+.Select-Container:hover {
+  box-shadow: 0 0 15px #4ade80;
+}
+
+/* Icon styling and animation */
+.fa-right-left {
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.fa-right-left:hover {
+  color: #4ade80;
+  transform: rotate(180deg);
+}
+
+/* Message styling */
+.msg {
+  text-align: center;
+  font-style: italic;
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* Specific styling for the button with class FormButtons to be on next line */
+.FormButtons {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 1rem;
+  align-self: center;
+  background: #4ade80;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #4ade80;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.FormButtons:hover {
+  box-shadow: 0 0 30px #22c55e;
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .DropDown {
+    flex-direction: column;
+  }
+
+  .from, .to {
+    width: 100%;
+  }
+
+  .FormButtons {
+    max-width: 100%;
+  }
+}
+/* Use a dark slate blue color for better contrast on white without using black */
+.Select-Container select,
+.Select-Container select option {
+  color: #2f4f4f; /* Dark Slate Gray */
+}
