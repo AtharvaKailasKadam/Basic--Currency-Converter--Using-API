@@ -1,0 +1,14 @@
+💱 Currency Converter
+This repository contains the source code for a Currency Converter web application built using HTML, CSS, and JavaScript.
+The app allows users to convert values between different currencies in real-time using live exchange rates.
+
+    API Used: The project uses the @fawazahmed0/currency-api — a fast, free,
+    and open-source API that provides up-to-date exchange rates in JSON format.
+
+🎨  AI-Powered CSS: The design and styling of the site are enhanced using TRAE AI,
+    which was used to generate creative and responsive CSS styling patterns for an engaging UI.
+
+    Learning-Based Project: This project was developed by learning from online tutorials, GitHub repositories, and various other web development resources.
+
+The application is lightweight, responsive, and beginner-friendly, making it a great example of integrating APIs and
+creative design into a functional tool.
