@@ -1,7 +1,10 @@
-const Base_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const Base_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/";
 
 const DropDown = document.querySelectorAll(".DropDown select");
-
+const FormButton = document.querySelector(".FormButtons");
+const FromCurr = document.querySelector(".from select");
+const ToCurr = document.querySelector(".to select");
+const Msg = document.querySelector(".msg");
 
 // Here we are accessing the countryList object from code.js
 // and populating the dropdowns with currency codes.
@@ -46,3 +49,26 @@ const UpdateFlag = (element) => {
   let img = element.parentElement.querySelector("img");
   img.src = newImg;
 };
+
+FormButton.addEventListener("click", async (evt) =>{
+  evt.preventDefault();
+  let amount = document.querySelector(".Amount input");
+  let amountvalue = amount.value;
+  if(amountvalue === "" || amountvalue <= 0)
+  {
+    alert("Please enter a valid amount");
+    return;
+    amountvalue = 1;
+    amount.value = "1";
+  }
+const URL = `${Base_URL}currencies/${FromCurr.value.toLowerCase()}.json`;
+let response = await fetch(URL);
+let data = await response.json();
+let rate = data[FromCurr.value.toLowerCase()][ToCurr.value.toLowerCase()];
+// If the rate is not found, it means the currency conversion is not available.
+// This Console log is for debugging purposes to see the rate fetched from the API.
+console.log(`1 ${FromCurr.value} = ${rate} ${ToCurr.value}`);
+
+let finalAmount = (amountvalue * rate);
+Msg.innerText = `${amountvalue} ${FromCurr.value} = ${finalAmount.toFixed(2)} ${ToCurr.value}`;
+});
