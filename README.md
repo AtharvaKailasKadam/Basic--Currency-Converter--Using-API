@@ -27,4 +27,38 @@ A simple and responsive Currency Converter web app built using **HTML**, **CSS (
 - No API key needed  
 - JSON format  
 - Updated daily  
-- Example URL:  
+- Example URL:
+
+- 
+---
+
+## ⚙️ How It Works
+
+```js
+const URL = `${Base_URL}/${fromCurrency.toLowerCase()}/${toCurrency.toLowerCase()}.json`;
+let response = await fetch(URL);
+let data = await response.json();
+
+📁 Project Files
+index.html – Structure
+
+style.css – TRAE AI generated styles
+
+script.js – JavaScript and API logic
+
+📚 Learning Resources
+YouTube tutorials
+
+GitHub examples
+
+TRAE AI for CSS
+
+Web dev blogs and docs
+
+ Run It Locally
+bash
+Copy
+Edit
+git clone https://github.com/AtharvaKailasKadam/currency-converter.git
+cd currency-converter
+open index.html
